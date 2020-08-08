@@ -62,6 +62,7 @@ public class ShowDocActivity extends AppCompatActivity implements ImageAdapter.O
                     upload.setKey(postSnapshot.getKey());
                     mUploads.add(upload);
                 }
+
                 mAdapter.notifyDataSetChanged();
                 mProgressCircle.setVisibility(View.INVISIBLE);
                 if (mUploads.size() == 0)

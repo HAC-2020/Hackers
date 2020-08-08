@@ -55,10 +55,10 @@ public class LoginOption extends Fragment {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* SharedPreferences preferences=getActivity().getPreferences(Context.MODE_PRIVATE);
+                SharedPreferences preferences=getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=preferences.edit();
                 editor.putString("user","not admin");
-                editor.commit();*/
+                editor.commit();
                 phoneNumberFragment phoneNumberFragment = new phoneNumberFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, phoneNumberFragment).addToBackStack(null).commit();
             }

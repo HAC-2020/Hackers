@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mask_detector.R;
 import com.example.mask_detector.adapter.SurAdapter;
+import com.example.mask_detector.auth.LoginOption;
 import com.example.mask_detector.model.SurCamera;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -127,16 +128,17 @@ public class SurveillanceActivity extends AppCompatActivity {
         });
     }
 
-   /* @Override
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
-        String id = pref.getString("user", null);
+        String id = pref.getString("user", "none");
         if(id.equals("admin"))
         {
-            startActivity(new Intent(SurveillanceActivity.this,HomeActivity.class));
+            startActivity(new Intent(SurveillanceActivity.this, LoginOption.class));
             finish();
         }
 
-    }*/
+
+    }
 }

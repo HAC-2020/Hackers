@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.mask_detector.R;
+
 public class AdminActivity extends AppCompatActivity {
 
     @Override

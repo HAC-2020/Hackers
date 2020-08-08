@@ -118,8 +118,8 @@ public class VerifyFragment extends Fragment {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(task -> {
                     SharedPreferences pref = getActivity().getPreferences(Context.MODE_PRIVATE);
-                    String id = pref.getString("user", null);
-                    if (task.isSuccessful()) {
+                    String id = pref.getString("user", "none");
+                    if (task.isSuccessful() && id.equals("not admin")) {
                         startActivity(new Intent(getContext(), HomeActivity.class));
                         getActivity().finish();
                     }

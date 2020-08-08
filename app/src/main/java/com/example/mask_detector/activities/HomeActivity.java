@@ -71,16 +71,16 @@ public class HomeActivity extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         SharedPreferences pref = getPreferences(Context.MODE_PRIVATE);
-        String id = pref.getString("user", null);
+        String id = pref.getString("user", "none");
 
        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             startActivity(new Intent(this, Login.class));
             finish();
         }
 
-        /*if(id!=null && id.equals("admin")){
+       else if(id.equals("admin")){
             startActivity(new Intent(this,SurveillanceActivity.class));
-        }*/
+        }
         else {
             Toast.makeText(this, FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber(), Toast.LENGTH_SHORT).show();
         }
